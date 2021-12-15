@@ -9,7 +9,7 @@ Note 2: this add-on is using an open-source JavaScript library for the unzip ope
 You can install this app as a PWA on your mobile device, moreover, it is available as a browser extension as-well-as a web application:
 
 Chrome: https://chrome.google.com/webstore/detail/zip-writer/jgomnenddgimfbmbhoggoodhpdciaedd  
-Edge:  
+Edge: https://microsoftedge.microsoft.com/addons/detail/jhjodpaagdoinapcekkffnmegjpnlcgj  
 Firefox: https://addons.mozilla.org/en-US/firefox/addon/zip-maker/  
 Opera: https://addons.opera.com/en/extensions/details/zip-writer/  
 Webapp & PWA: https://webbrowsertools.com/zip-writer/  
