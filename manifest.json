@@ -1,11 +1,9 @@
 {
-  "version": "0.1.5",
+  "version": "0.1.7",
   "name": "ZIP Writer",
   "manifest_version": 3,
   "offline_enabled": true,
-  "short_name": "zip-maker",
   "optional_permissions": ["downloads"],
-  "permissions": ["storage", "contextMenus"],
   "homepage_url": "https://mybrowseraddon.com/zip-maker.html",
   "description": "Create zip files via an easy-to-use UI right in your browser!",
   "commands": {
@@ -14,6 +12,10 @@
   "background": {
     "service_worker": "background.js"
   },
+  "permissions": [
+    "storage", 
+    "contextMenus"
+  ],
   "action": {
     "default_title": "ZIP Writer",
     "default_icon": {

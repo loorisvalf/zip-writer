@@ -3,8 +3,8 @@ body {
 	margin: 0;
 	padding: 0;
 	width: 100%;
-  color: #555;
-	font-size: 12px;
+  color: #333;
+	font-size: 13px;
 	font-family: monospace;
 }
 
@@ -20,7 +20,7 @@ table {
 }
 
 input {
-  font-size: 12px;
+  font-size: 13px;
 	font-family: monospace;
   box-sizing: border-box;
 }
@@ -31,9 +31,11 @@ input[type='file'] {
 	width: 100%;
 	margin: auto;
 	height: 100%;
+  padding: 10px;
 	cursor: pointer;
 	position: absolute;
 	vertical-align: middle;
+  box-sizing: border-box;
 }
 
 progress {
@@ -63,11 +65,11 @@ ul {
 
 ul li {
   padding: 0;
-  color: #555;
-  height: 22px;
-  font-size: 12px;
+  color: #333;
+  height: 24px;
+  font-size: 13px;
   user-select: text;
-  line-height: 22px;
+  line-height: 24px;
   text-indent: 10px;
   font-family: monospace;
 }
@@ -106,7 +108,7 @@ ul li {
   padding: 0;
   width: auto;
   height: 22px;
-  font-size: 12px;
+  font-size: 13px;
   text-align: right;
   line-height: 22px;
   position: absolute;
@@ -137,7 +139,7 @@ ul li {
   color: #777;
   height: 42px;
   outline: none;
-  font-size: 12px;
+  font-size: 13px;
   text-indent: 10px;
   user-select: none;
   font-family: monospace;
@@ -224,7 +226,7 @@ ul li {
 }
 
 .toolbar div svg {
-	fill: #858585;
+	fill: #555;
   pointer-events: none;
 	vertical-align: middle;
 }
