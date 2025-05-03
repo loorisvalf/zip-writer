@@ -73,6 +73,12 @@ var config = {
       return chrome.runtime.getManifest().homepage_url;
     }
   },
+  "app": {
+    "start": function () {
+      const theme = config.storage.read("theme") !== undefined ? config.storage.read("theme") : "light";
+      document.documentElement.setAttribute("theme", theme !== undefined ? theme : "light");
+    }
+  },
   "resize": {
     "timeout": null,
     "method": function () {
@@ -340,6 +346,7 @@ var config = {
   	}
 	},
   "load": function () {
+    const theme = document.getElementById("theme");
     const reload = document.getElementById("reload");
     const fileio = document.getElementById("fileio");
     const support = document.getElementById("support");
@@ -370,6 +377,14 @@ var config = {
       /*  */
       config.zip.buffer.files = [...e.target.files];
       config.zip.model.files.add(config.zip.buffer.files, config.clean.secondary);
+    }, false);
+    /*  */
+    theme.addEventListener("click", function () {
+      let attribute = document.documentElement.getAttribute("theme");
+      attribute = attribute === "dark" ? "light" : "dark";
+      /*  */
+      document.documentElement.setAttribute("theme", attribute);
+      config.storage.write("theme", attribute);
     }, false);
     /*  */
     download.addEventListener("click", function () {
@@ -423,13 +438,15 @@ var config = {
       config.zip.model.files.add(config.zip.buffer.files, config.clean.secondary);
     });
     /*  */
+    config.storage.load(config.app.start);
     window.removeEventListener("load", config.load, false);
   }
 };
 
 config.port.connect();
 
-window.addEventListener("load", config.load, false);
 document.addEventListener("drop", config.prevent.drop, true);
-window.addEventListener("resize", config.resize.method, false);
 document.addEventListener("dragover", config.prevent.drop, true);
+
+window.addEventListener("load", config.load, false);
+window.addEventListener("resize", config.resize.method, false);
